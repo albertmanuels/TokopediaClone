@@ -1,16 +1,20 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import AppSafeView from '../../components/AppSafeView';
+import Header from '../../components/Header';
+import Banner from '../../components/Banner';
+import MenuSection from './layouts/MenuSection';
 
 const HomeScreen = () => {
   return (
     <AppSafeView>
-      <Text>HomeScreen</Text>
+      <Header />
+      <ScrollView contentContainerStyle={{flex: 1, gap: 16}}>
+        <Banner />
+        <MenuSection />
+      </ScrollView>
     </AppSafeView>
   );
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({});
